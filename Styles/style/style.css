@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Afacad', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+:root{
+    --primary-color: rgb(36, 184, 252);
+    --boder-line: 1px solid rgba(0, 0, 0, 0.2)
+}
+
+.App{
+    justify-content: center;
+    margin: 0 auto;
+}
+/* ---------------- */
+
+.header{
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-bottom: var(--boder-line);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/* --Logo */
+.header_List:nth-child(1){
+    margin-left: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.header_List:nth-child(1)>p{
+    margin-left: 2rem;
+    font-size: 1.4rem;
+}
+.header_List:nth-child(1)>p>span{
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+/* --Search */
+.header_List:nth-child(2){
+    display: flex;
+    align-items: center;
+}
+.header_List:nth-child(2)>input{
+    width: 30rem;
+    padding: 0.2rem 0.3rem;
+    outline: none;
+    border-radius: 0px;
+}
+.header_List:nth-child(2)>button{
+    background-color: transparent;
+    height: 100%;
+    padding: 0.2rem 0.2rem;
+    cursor: pointer;
+    border-left: 0px;
+    font-size: 0.385rem;
+}
+.header_List:nth-child(2)>button>img{
+    opacity: 0.8;
+}
+
+/* --Icons */
+.header_List:nth-child(3){
+    display: flex;
+}
+.header_List:nth-child(3)>span{
+    padding: 0.2rem 0.5rem;
+    display: flex;
+}
+.icons_bell{
+    opacity: 0.7;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: red;
+    margin: -0.2rem 0 0 -0.25rem;
+    font-size: 0.65rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+/* --Admin */
+.header_List:nth-child(4){
+    display: flex;
+    align-items: center;
+}
+.header_List:nth-child(4)>p{
+    padding: 0rem 0.5rem;
+}
+
+/* ---------------- */
+.bodyer{
+    height: 100vh;
+    width: 100%;
+    margin-top: 2.5rem;
+    display: flex;
+}
+/* ---Nav  */
+.nav{
+    width: 20vw;
+    height: 100%;
+    border-right: var(--boder-line);
+    
+}
+
+/* image & udername */
+.userAdmin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    border-bottom: var(--boder-line);
+}
+
+.userAdmin>img{
+    border-radius: 50%;
+    border: 1px solid  rgba(0, 0, 0, 0.2);
+    width: 35%;
+    height: auto;
+}
+.userAdmin>p{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* --nav_list */
+.nav_list{
+    height: 70%;
+}
+.nav_listAll{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.nav_lis_items{
+    cursor: pointer;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    border-bottom: var(--boder-line);
+}
+.nav_lis_items:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.nav_lis_items{
+    border: none;
+    border-bottom: var(--boder-line);
+}
+
+.nav_lis_items>img{
+    margin-left: 1rem;
+}
+.nav_lis_items>p{
+    margin-left: 0.5rem;
+}
+
+.active{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* --content */
+.content{
+    width: calc(100% - 20vw);
+    height: 100vh;
+}
+
+/* ---Page */
+.page_all{
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* -Page_1 */
+#page1>p{
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    margin: 1.5rem 0 1rem 2rem;
+}
+
+.page1_list{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.page1_list_items{
+    padding:0.5rem 1.6rem;
+    border: var(--boder-line);
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/* -Page1 show */
+.page1_show_all {
+    max-height:  70vh; /* Đặt chiều cao tối đa của phần tử */
+    overflow-y: auto; /* Tạo thanh cuộn dọc khi cần thiết */
+    overflow-x:hidden;
+}
+
+.page1_list_show{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    border: var(--boder-line);
+}
+.page1_list_show_items{
+    padding:0.5rem 1.6rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ---Page2 */
+.page2_form{
+    /* background-color: aquamarine; */
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.page2_form>span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.page2_form>span>label {
+    width: 10rem;
+}
+.page2_form>span>input,select{
+    width: 20rem;
+    height: 2rem;
+    border-color: var(--boder-line);
+    outline: none;
+    padding: 0.2rem 0.5rem;
+}
+
+.page2_submit{
+    margin: 1rem 25rem;
+    width: 6rem;
+    height: 2rem;
+    cursor: pointer;
+}

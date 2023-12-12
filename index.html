@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles//style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="App">
+        <!-- Header -->
+        <header class="header">
+            <div class="header_List">
+                <p>HoangHa <span>Hotel</span></p>
+            </div>
+            <div class="header_List">
+                <input type="" placeholder="" />
+                <button>
+                    <img src="./image//magnifying-glass-solid.svg" alt=""/>
+                </button>
+            </div>
+            <div class="header_List">
+                <span>
+                    <i class="fa fa-comment"></i>
+                    <div class="icons_bell">1</div>
+                </span>
+                <span>
+                    <i class="fa fa-envelope"></i>
+                    <div class="icons_bell">1</div>
+                </span>
+                <span>
+                    <i class="fa fa-bell"></i>
+                    <div class="icons_bell">1</div>
+                </span>
+
+            </div>
+            <div class="header_List">
+                <i class="fa fa-user"></i>
+                <p>Admin</p>
+            </div>
+        </header>
+        <!-- Body -->
+        <div class="bodyer">
+            <!-- nav -->
+            <div class="nav">
+                <!-- image & udername -->
+                <div class="userAdmin">
+                    <img src="https://visualpharm.com/assets/381/Admin-595b40b65ba036ed117d3b23.svg" alt=""/>
+                    <p>Admin 01</p>
+                </div>
+                <!-- nav-list -->
+                <div class="nav_list">
+                    <ul class="nav_listAll">
+                        <button class="nav_lis_items  active">
+                            <img src="./image/house-solid.svg" alt="" onclick="hangdleChangeBackground1()"/>
+                            <p>Trang Chủ</p>
+                        </button>
+                        <button class="nav_lis_items " onclick={hangdleChangeBackground2}>
+                            <img src="./image/bed-solid.svg" alt="" />
+                            <p>Quản lý thuê, trả phòng</p>
+                        </button>
+                        <button class="nav_lis_items " onclick={hangdleChangeBackground3}>
+                            <img src="./image/bed-solid.svg" alt="" />
+                            <p>Quản lý dịch vụ</p>
+                        </button>
+                        <button class="nav_lis_items " onclick={hangdleChangeBackground4}>
+                            <img src="./image/bed-solid.svg" alt="" />
+                            <p>Quản lý khách hàng</p>
+                        </button>
+                        <button class="nav_lis_items " onclick={hangdleChangeBackground5}>
+                            <img src="./image/bed-solid.svg" alt="" />
+                            <p>Quản lý phòng</p>
+                        </button>
+                        <button class="nav_lis_items " onclick={hangdleChangeBackground6}>
+                            <img src="./image/bed-solid.svg" alt="" />
+                            <p>Quản lý tiện nghi</p>
+                        </button>
+                    </ul>
+                </div>
+            </div>
+            <!-- content -->
+            <div class="content">
+                <!-- Trang chủ -->
+                <div id="page1" class="page">
+                  <p>Trang chủ</p>
+                  <div class="page_all">
+                    <ul class="page1_list">
+                        <li class="page1_list_items">Mã Phòng</li>
+                        <li class="page1_list_items">Tên phòng</li>
+                        <li class="page1_list_items">Người đặt</li>
+                        <li class="page1_list_items">Số lượng</li>
+                        <li class="page1_list_items">Ngày đặt</li>
+                        <li class="page1_list_items">Ngày kết thúc</li>
+                        <li class="page1_list_items">Số điện thoại</li>
+                        <li class="page1_list_items">Email</li>
+                        <li class="page1_list_items">Tổng giá</li>
+                    </ul>
+                    <!-- -- -->
+                    <div class="page1_show_all"></div>
+                    <!-- -- -->
+                  </div>
+                </div>
+                
+                <!-- Quản lý thuê, trả phòng -->
+                <div id="page2" class="page" style="display: none;">
+                  <form class="page2_form">
+                    <span>
+                        <label for="room">Mã Phòng:</label>
+                        <input type="text" id="room" name="room" required>
+                    </span>
+                   
+                    <span>
+                        <label for="room">Tên phòng:</label>
+                        <input type="text" id="roomName" name="room" required>
+                    </span>
+
+                    <span>
+                        <label for="room">Người đặt:</label>
+                        <input type="text" id="userName" name="room" required>
+                    </span>
+
+                    <span>
+                        <label for="room">Số Lượng:</label>
+                        <input type="number" id="SL" name="room" required>
+                    </span>
+
+                    <span>
+                        <label for="room">Ngày đặt:</label>
+                        <input type="date" id="dateStart" name="room" required>
+                    </span>
+
+                    <span>
+                        <label for="room">Ngày kết thúc:</label>
+                        <input type="date" id="dateEnd" name="room" required>
+                    </span>
+
+                    <span>
+                        <label for="room">Số điện thoại:</label>
+                        <input type="text" id="phoneNumber" name="room" required>
+                    </span>
+
+                    <span>
+                        <label for="room">Email:</label>
+                        <input type="email" id="email" name="room" required>
+                    </span>
+
+                    <span>
+                        <label for="room">Tổng giá:</label>
+                        <input type="number" id="total" name="room" required>
+                    </span>
+
+                  <button class="page2_submit">Submit</button>
+
+                  </form>
+                </div>
+                
+                <!-- Quản lý dịch vụ -->
+                <div id="page3" class="page" style="display: none;">
+                  <p>Đây là quản lý dịch vụ</p>
+                </div>
+                <!-- Quản lý dịch vụ -->
+                
+                <div id="page4" class="page" style="display: none;">
+                  <p>Đây là quản lý  vụ</p>
+                </div>
+                <!-- Quản lý dịch vụ -->
+
+                <div id="page5" class="page" style="display: none;">
+                  <p>Đây là quản lý dịch </p>
+                </div>
+                <!-- Quản lý dịch vụ -->
+
+                <div id="page6" class="page" style="display: none;">
+                  <p>Đây là quản lý dịch vụ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="./Styles//java/app.js"></script>
+</html>
